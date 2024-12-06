@@ -1,18 +1,18 @@
 import "./Stopwatch.css"
 import React, { useEffect,useState} from "react";
 function Stopwatch() {
-    const [time, setTime]=useState(0);
+    let [time, setTime]=useState(0);
     const [isactive, setActivity]=useState(false);
     useEffect(()=>{
-        let timer;
+       // let timer;
         if(isactive){
-            timer=setInterval(()=>{
+            time=setInterval(()=>{
                 setTime((prevTime)=>prevTime+1);
             },1000);
         }else{
-            clearInterval(timer);
+            clearInterval(time);
         }
-        return () => clearInterval(timer);
+        return () => clearInterval(time);
     },[isactive]);
   return (
     <div className="container">
@@ -22,7 +22,5 @@ function Stopwatch() {
         <button id="btn" onClick={()=>setTime(0)} disabled={isactive}>Reset</button>
     </div>
   )
-
 }
-
 export default Stopwatch
