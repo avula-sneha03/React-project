@@ -1,0 +1,15 @@
+.container{
+    height:200px;
+    width:300px;
+    background-color:rgb(213, 178, 178);
+    border-radius: 6%;
+    justify-self: center;
+    text-align: center;
+    padding: 20px 20px;
+}
+#btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-color:azure;
+    cursor: pointer;
+}
